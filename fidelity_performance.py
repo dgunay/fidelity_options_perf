@@ -33,7 +33,7 @@ class Prototype:
     def __init__(self, end_date=None):
         self.end_date = pd.to_datetime(end_date)
 
-    def run(self, csv_files: list):
+    def run(self, *csv_files):
         # TODO: add stuff that filters the bs Fidelity adds to their exported CSVs
         dfs = []
         for file in csv_files:
