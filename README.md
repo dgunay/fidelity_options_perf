@@ -28,3 +28,13 @@ $ python fidelity_performance.py run data1.csv data2.csv ...
 CLI argument parsing is done with Fire.
 
 Pandas does most of the heavy lifting (CSV parsing, filtering, summing).
+
+## Notes
+
+You may notice a difference between what this tool reports and what Fidelity
+reports on your year-to-date tax information profit/loss. While I make no claim
+that my code is 100% correct, do note that it will currently report in-progress 
+trades (e.g. you sell to open SPY for $40 and haven't bought to close or had it
+expire yet, and it will say you have made gross $40 on SPY and $0 expense on SPY).
+Fidelity will not report gain/loss on your tax-information until your 
+positions close or expire.
